@@ -1,8 +1,101 @@
-body { font-family: sans-serif; color: black; background: white; margin: 0; }
-.container { max-width: 800px; margin: 0 auto; padding: 1rem; }
-h1 { border-bottom: 1px solid gray; padding-bottom: 0.5rem; }
-.faq-item { border: 1px solid #ccc; padding: 1rem; margin-bottom: 1rem; }
-.faq-question { font-weight: bold; margin: 0 0 0.5rem; }
-.faq-answer { margin: 0 0 0.5rem; }
-.faq-category { font-size: 0.85rem; color: gray; margin: 0 0 0.25rem; }
-.empty-state { padding: 1rem; border: 1px solid #ccc; color: gray; }
+:root {
+  --moby-blue: #1D63ED;
+  --dark-blue: #00084D;
+  --light-blue: #E5F2FC;
+  --off-black: #17191E;
+  --blue-700: #00308D;
+  --blue-200: #C0E0FA;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: Roboto, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  color: var(--off-black);
+  background: #ffffff;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+a { color: var(--moby-blue); }
+
+/* Header */
+.site-header {
+  background: var(--dark-blue);
+  padding: 2.5rem 1.5rem;
+}
+
+.header-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.site-header h1 {
+  margin: 0;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+.tagline {
+  margin: 0.5rem 0 0;
+  color: var(--light-blue);
+  font-weight: 400;
+}
+
+/* Content */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* FAQ cards */
+.faq-item {
+  background: var(--light-blue);
+  border-radius: 8px;
+  padding: 24px;
+}
+
+.faq-category {
+  display: inline-block;
+  margin: 0 0 0.75rem;
+  padding: 0.2rem 0.7rem;
+  background: var(--blue-200);
+  color: var(--blue-700);
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  border-radius: 999px;
+}
+
+.faq-question {
+  margin: 0 0 0.5rem;
+  color: var(--dark-blue);
+  font-weight: 600;
+  font-size: 1.15rem;
+}
+
+.faq-answer {
+  margin: 0;
+  color: var(--off-black);
+}
+
+/* Empty state */
+.empty-state {
+  padding: 3rem 1.5rem;
+  background: var(--light-blue);
+  border-radius: 8px;
+  text-align: center;
+  color: var(--dark-blue);
+  font-weight: 500;
+}
