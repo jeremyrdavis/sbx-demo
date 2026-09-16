@@ -15,8 +15,8 @@ async function loadFaqs() {
       const article = document.createElement('article');
       article.className = 'faq-item';
       article.innerHTML = `
-        <p class="faq-category">${faq.category}</p>
-        <p class="faq-question">${faq.question}</p>
+        <span class="faq-category">${faq.category}</span>
+        <h2 class="faq-question">${faq.question}</h2>
         <p class="faq-answer">${faq.answer}</p>
       `;
       list.appendChild(article);
